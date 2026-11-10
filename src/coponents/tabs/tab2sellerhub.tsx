@@ -107,7 +107,7 @@ export default function Tab2SellerHub({ listings, onRefresh, onGoToMarket }: Tab
 
     async function calculateWithPython() {
       try {
-        const res = await fetch("http://localhost:8000/api/calculate-seller-payout", {
+        const res = await fetch("/api/calculate-seller-payout", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
