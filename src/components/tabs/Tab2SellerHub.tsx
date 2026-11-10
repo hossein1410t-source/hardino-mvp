@@ -11,7 +11,7 @@ const supabase = createClient(
   { auth: { persistSession: false, autoRefreshToken: false } }
 );
 
-const PAYOUT_API = "http://localhost:8000/api/calculate-seller-payout";
+const PAYOUT_API = "/api/calculate-seller-payout";
 const LOCAL_FEE_RATE = 0.03;
 const OTHER = "__OTHER__";
 

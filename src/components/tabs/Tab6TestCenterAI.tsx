@@ -56,7 +56,7 @@ export default function Tab6TestCenterAI({ listings }: Tab6Props) {
     setSavedSuccess(false);
 
     try {
-      const res = await fetch("http://localhost:8000/api/analyze-benchmark-image", {
+      const res = await fetch("/api/analyze-benchmark-image", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });

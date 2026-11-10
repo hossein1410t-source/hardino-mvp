@@ -170,7 +170,7 @@ export default function Tab7EscrowRoom({ listings, presetId }: Tab7Props) {
       let relCode = activeOrder.release_code;
 
       try {
-        const res = await fetch("http://localhost:8000/api/verify-payment", {
+        const res = await fetch("/api/verify-payment", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
