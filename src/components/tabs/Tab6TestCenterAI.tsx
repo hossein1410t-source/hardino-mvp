@@ -215,13 +215,13 @@ export default function Tab6TestCenterAI({ listings }: Tab6Props) {
                 <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-2xl">
                   <span className="text-slate-400 block text-[10px]">بیشترین دمای هسته:</span>
                   <span className="text-cyan-400 font-mono font-extrabold text-lg">
-                    {aiResult.extracted_metrics.max_temp}°C
+                    {aiResult?.extracted_metrics?.max_temp}°C
                   </span>
                 </div>
                 <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-2xl">
                   <span className="text-slate-400 block text-[10px]">دمای Hotspot:</span>
                   <span className="text-amber-400 font-mono font-extrabold text-lg">
-                    {aiResult.extracted_metrics.hotspot_temp}°C
+                    {aiResult?.extracted_metrics?.hotspot_temp}°C
                   </span>
                 </div>
                 <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-2xl">

@@ -2,14 +2,17 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 
-const vazir = Vazirmatn({ 
-  subsets: ["arabic"],
-  weight: ["400", "500", "700", "800"]
+const vazir = Vazirmatn({
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-vazir",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "پلتفرم معاملات امن سخت‌افزار | خرید و فروش با شناسنامه سلامت",
-  description: "مارکت‌پلیس واسطه قطعات کارکرده کامپیوتر با تست تخصصی و درگاه پرداخت امانی",
+  title: "هاردینو | خرید و فروش امن سخت‌افزار با شناسنامه سلامت",
+  description:
+    "مارکت‌پلیس تخصصی قطعات کارکرده کامپیوتر با شناسنامه سلامت دیجیتال و پرداخت امانی",
 };
 
 export default function RootLayout({
@@ -18,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={`${vazir.className} bg-slate-100 text-slate-900 antialiased`}>
+    <html lang="fa" dir="rtl" className={vazir.variable}>
+      <body
+        className={`${vazir.className} font-sans bg-slate-100 text-slate-900 antialiased`}
+        style={{ fontFeatureSettings: '"ss01" 1' }}
+      >
         {children}
       </body>
     </html>

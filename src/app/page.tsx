@@ -9,7 +9,7 @@
 
 
 
-
+import ActionBanners from "../components/layout/ActionBanners";
 import Tab3SmartBuilder from "../components/tabs/Tab3SmartBuilder";
 import HeroBanner from "../components/layout/HeroBanner";
 import Footer from "../components/layout/Footer";
@@ -1609,6 +1609,7 @@ export default function Page() {
         {tab === 6 && <Tab7EscrowRoom listings={listings} presetId={escrowId} />}
       </main>
     
+      {tab === 0 && <ActionBanners onNavigateTab={setTab} />}
       <Footer onNavigateTab={setTab} />
 </div>
   );
