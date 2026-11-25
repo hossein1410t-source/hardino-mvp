@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "هاردینو | خرید و فروش امن سخت‌افزار با شناسنامه سلامت",
   description:
     "مارکت‌پلیس تخصصی قطعات کارکرده کامپیوتر با شناسنامه سلامت دیجیتال و پرداخت امانی",
+  other: {
+    enamad: "295451",
+  },
 };
 
 export default function RootLayout({
